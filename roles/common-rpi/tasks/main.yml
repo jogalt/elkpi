@@ -19,7 +19,7 @@
     with_items:
       - pexpect
       - python-apt
-    when: aptgetinstall01|succeeded
+    when: aptgetinstall01 is succeeded
     register: piprequirements01
     tags:
       - installs
