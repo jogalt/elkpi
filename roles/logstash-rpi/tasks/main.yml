@@ -71,7 +71,7 @@
 
   - name: Config | gzip decompress Geolitecity db
     command: /bin/gzip -d /etc/logstash/GeoLiteCity2.dat.gz chdir=/etc/logstash creates=/etc/logstash/GeoLiteCity2
-    when: unarchiveGeolitecity|failed
+    when: unarchiveGeolitecity is failed
 
   - name: Config | create templates dir
     file:
